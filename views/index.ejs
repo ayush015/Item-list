@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Item-List</title>
+    <!-- bootstrap -->
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+
+  </head>
+  <body>
+
+    <div class="box moving" id="heading">
+      <h1> <%= listTitle %> </h1>
+    </div>
+<div class="container-fluid">
+<div class="box">
+  <% for (var i=0;i<newItems.length;i++) { %>
+   <div class="item">
+     <input type="checkbox" >
+      <p> <%=newItems[i]%> </p>
+   </div>
+    <% } %>
+
+      <form action="/" method="post">
+        <input type="text"  name="itemList" placeholder="Add" required autocomplete="off"/>
+       <button type="submit" class="btn btn-primary"  name="list" value=<%= listTitle %> >➕</button>
+       </form>
+    </div>
+    </div>
+
+
+<!-- <div class="box item">
+  <p>
+
+    <a href="http://localhost:3000/work">Go to the Work list</a>
+  </p>
+</div> -->
+
+<footer>
+    ©GZsNOW 2020
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>
